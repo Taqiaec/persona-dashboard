@@ -9,7 +9,8 @@
     "title": "System Monitor",
     "url": "http://43.157.208.98:19999",
     "icon": "activity",
-    "category": "system"
+    "category": "system",
+    "internal": "monitor"
   },
   {
     "title": "File Manager",

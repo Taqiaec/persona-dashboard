@@ -4,6 +4,7 @@ import BackgroundCanvas from './components/BackgroundCanvas.jsx'
 import MenuCard from './components/MenuCard.jsx'
 import ProjectsPage from './components/ProjectsPage.jsx'
 import SettingsPage from './components/SettingsPage.jsx'
+import MonitorPage from './components/MonitorPage.jsx'
 import links from './links.json'
 import styles from './App.module.css'
 
@@ -52,6 +53,7 @@ export default function App() {
 
   if (page === 'projects') return <ProjectsPage onBack={() => setPage('home')} />
   if (page === 'settings') return <SettingsPage onBack={() => setPage('home')} />
+  if (page === 'monitor') return <MonitorPage onBack={() => setPage('home')} />
 
   const grouped = links.reduce((acc, link) => {
     if (!acc[link.category]) acc[link.category] = []
