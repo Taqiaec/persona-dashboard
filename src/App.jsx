@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Header from './components/Header.jsx'
 import BackgroundCanvas from './components/BackgroundCanvas.jsx'
 import MenuCard from './components/MenuCard.jsx'
+import ProjectsPage from './components/ProjectsPage.jsx'
+import SettingsPage from './components/SettingsPage.jsx'
 import links from './links.json'
 import styles from './App.module.css'
 
@@ -46,6 +48,10 @@ const CATEGORY_LABELS = {
 
 export default function App() {
   const [hoveredCard, setHoveredCard] = useState(null)
+  const [page, setPage] = useState('home')
+
+  if (page === 'projects') return <ProjectsPage onBack={() => setPage('home')} />
+  if (page === 'settings') return <SettingsPage onBack={() => setPage('home')} />
 
   const grouped = links.reduce((acc, link) => {
     if (!acc[link.category]) acc[link.category] = []
@@ -79,6 +85,7 @@ export default function App() {
                       hovered={hoveredCard === link.title}
                       onHover={() => setHoveredCard(link.title)}
                       onLeave={() => setHoveredCard(null)}
+                      onClick={link.internal ? () => setPage(link.internal) : undefined}
                     />
                   ))}
                 </div>

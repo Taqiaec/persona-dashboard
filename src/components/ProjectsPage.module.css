@@ -1,0 +1,97 @@
+.page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backBar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.backBtn {
+  background: none;
+  border: 1px solid #e53935;
+  color: #e53935;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.backBtn:hover {
+  background: #e53935;
+  color: #0a0a0a;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: #e53935;
+}
+
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, #e53935 0%, transparent 100%);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #222;
+  padding: 1.25rem;
+  transition: 0.2s;
+  cursor: default;
+}
+
+.card:hover {
+  border-color: #e53935;
+  box-shadow: 0 0 20px rgba(229,57,53,0.15);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stopped {
+  background: #1a1a1a;
+  color: #666;
+  border: 1px solid #333;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}

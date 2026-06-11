@@ -1,19 +1,19 @@
 [
   {
     "title": "SSH Terminal",
-    "url": "ssh://43.157.208.98",
+    "url": "http://43.157.208.98:7681",
     "icon": "terminal",
     "category": "system"
   },
   {
     "title": "System Monitor",
-    "url": "https://43.157.208.98:9090",
+    "url": "http://43.157.208.98:19999",
     "icon": "activity",
     "category": "system"
   },
   {
     "title": "File Manager",
-    "url": "#",
+    "url": "http://43.157.208.98:7682",
     "icon": "folder",
     "category": "system"
   },
@@ -27,12 +27,14 @@
     "title": "Projects",
     "url": "#",
     "icon": "code",
-    "category": "apps"
+    "category": "apps",
+    "internal": "projects"
   },
   {
     "title": "Settings",
     "url": "#",
     "icon": "settings",
-    "category": "system"
+    "category": "system",
+    "internal": "settings"
   }
 ]
