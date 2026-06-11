@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Header from './components/Header.jsx'
 import BackgroundCanvas from './components/BackgroundCanvas.jsx'
 import MenuCard from './components/MenuCard.jsx'
+import LoginPage from './components/LoginPage.jsx'
 import ProjectsPage from './components/ProjectsPage.jsx'
 import SettingsPage from './components/SettingsPage.jsx'
 import MonitorPage from './components/MonitorPage.jsx'
+import creds from './auth.json'
 import links from './links.json'
 import styles from './App.module.css'
 
@@ -49,8 +51,17 @@ const CATEGORY_LABELS = {
 
 export default function App() {
   const [hoveredCard, setHoveredCard] = useState(null)
-  const [page, setPage] = useState('home')
+  const [page, setPage] = useState('login')
 
+  const handleLogin = (username, password, setError) => {
+    if (username === creds.username && password === creds.password) {
+      setPage('home')
+    } else {
+      setError('INVALID CREDENTIALS')
+    }
+  }
+
+  if (page === 'login') return <LoginPage onLogin={handleLogin} />
   if (page === 'projects') return <ProjectsPage onBack={() => setPage('home')} />
   if (page === 'settings') return <SettingsPage onBack={() => setPage('home')} />
   if (page === 'monitor') return <MonitorPage onBack={() => setPage('home')} />
