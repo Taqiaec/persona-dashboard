@@ -1,8 +1,10 @@
+import BackgroundCanvas from './BackgroundCanvas.jsx'
 import styles from './SettingsPage.module.css'
 
 export default function SettingsPage({ onBack }) {
   return (
     <div className={styles.page}>
+      <BackgroundCanvas />
       <div className={styles.backBar}>
         <button className={styles.backBtn} onClick={onBack}>&#x25C0; BACK</button>
         <span className={styles.title}>SETTINGS</span>
