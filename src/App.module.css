@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.section {
+  animation: fadeSlideIn 0.6s ease-out both;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.sectionLabel {
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #e53935;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sectionLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #e53935 0%, transparent 100%);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+.footerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #333 50%, transparent 100%);
+}
+
+.footerText {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: #555;
+  white-space: nowrap;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) skewY(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

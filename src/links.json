@@ -1,0 +1,38 @@
+[
+  {
+    "title": "SSH Terminal",
+    "url": "ssh://43.157.208.98",
+    "icon": "terminal",
+    "category": "system"
+  },
+  {
+    "title": "System Monitor",
+    "url": "https://43.157.208.98:9090",
+    "icon": "activity",
+    "category": "system"
+  },
+  {
+    "title": "File Manager",
+    "url": "#",
+    "icon": "folder",
+    "category": "system"
+  },
+  {
+    "title": "GitHub",
+    "url": "https://github.com",
+    "icon": "github",
+    "category": "links"
+  },
+  {
+    "title": "Projects",
+    "url": "#",
+    "icon": "code",
+    "category": "apps"
+  },
+  {
+    "title": "Settings",
+    "url": "#",
+    "icon": "settings",
+    "category": "system"
+  }
+]

@@ -1,0 +1,109 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(229, 57, 53, 0.15);
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.card:hover {
+  background: rgba(229, 57, 53, 0.08);
+  border-color: rgba(229, 57, 53, 0.5);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 0 30px rgba(229, 57, 53, 0.15),
+    0 0 60px rgba(229, 57, 53, 0.05);
+}
+
+.card:hover .title {
+  color: #e53935;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+  transform: translateX(4px);
+  color: #e53935;
+}
+
+.card:hover .glitchBar {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.card:hover .bottomAccent {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.card:hover .iconWrap {
+  color: #e53935;
+  border-color: rgba(229, 57, 53, 0.4);
+}
+
+.glitchBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e53935;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.bottomAccent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e53935);
+  transform: scaleX(0);
+  transform-origin: right;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+  color: #888;
+  transition: all 0.25s ease;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.textWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ccc;
+  transition: color 0.25s ease;
+}
+
+.arrow {
+  font-size: 0.6rem;
+  color: #555;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.25s ease;
+}
